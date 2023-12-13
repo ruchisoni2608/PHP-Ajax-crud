@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+  <title>CRUD Operations with Ajax and jQuery</title>
+    
+<style>
+    .center{
+        text-align: center;
+    }
+    input{
+      width: 100%;
+    }
+    textarea{
+      width: 100%;
+    }
+    .container {
+
+  margin-bottom: 30px;
+}
+</style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+  <h2 style="text-align: center;">Users List</h2>
+  <table id="users-table"  class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Birthdate</th>
+        <th>Country</th>
+        <th>Image</th>
+        <th>Hobbies</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- User data will be fetched and populated here using Ajax -->
+    </tbody>
+  </table>
+</div>
+<div class="container">
+  <h2>Add New User</h2>
+  <form id="user-form" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="user_id" id="user_id" value="">
+    <label>Name:</label>
+    <input type="text" name="name" id="name" required><br>
+
+    <label>Email:</label>
+    <input type="email" name="email" id="email" required><br>
+
+    <label>Gender:</label><br>
+    <select name="gender" id="gender" required>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select><br>
+
+    <label>Birthdate:</label>
+    <input type="date" name="birthdate" id="birthdate" required><br>
+<!-- 
+    <label>Country:</label>
+    <input type="text" name="country" id="country" required><br> -->
+
+  
+        <label>Country</label>
+        <select name="country" id="country" class="form-control" required>
+            <option value="" disabled selected>Select a country</option>
+            <option value="India">India</option>
+            <option value="USA">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+           
+            <!-- Add more countries as needed -->
+        </select>
+   
+
+    <label>Image:</label>
+    <input type="file" name="image" id="image"><br>
+
+  
+    <label>Hobbies:</label>
+    <textarea name="hobbies" id="hobbies"></textarea><br>
+
+    <button type="submit" id="add-user">Add User</button>
+    <button type="button" id="update_user" >Update User</button>
+   
+  </form>
+</div>
+</body>
+</html>
