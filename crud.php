@@ -5,7 +5,7 @@ ini_set('display_errors', '1');
 
 $servername = "localhost";
 $username = "root";
-$password = "Root#roo12";
+$password = "";
 $dbname = "mydb";
 
 
